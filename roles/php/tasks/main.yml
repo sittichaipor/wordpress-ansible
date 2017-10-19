@@ -1,0 +1,12 @@
+---
+
+- name: Install PHP and associated packages
+  yum: name=php state=latest
+
+- name: Install PHP GD library
+  yum: name=php-gd state=latest
+  notify:
+    - Restart Apache
+
+- name: Install PHP-Mysql
+  yum: name=php-mysql state=latest 

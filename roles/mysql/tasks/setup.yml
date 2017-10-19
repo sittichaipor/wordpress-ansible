@@ -1,0 +1,22 @@
+---
+
+- name: Install MySQL Repo
+  yum: 
+    name=https://dev.mysql.com/get/mysql57-community-release-el7-11.noarch.rpm
+    state=present
+
+- name: Install MySQL Server
+  yum:
+    name=mysql-server
+    state=latest
+
+- name: Install MySQL module for PHP
+  yum: name=php-mysql state=latest
+
+- name: Start MySQL
+  service: name=mysqld state=started enabled=yes
+ 
+- name: Move Authen file
+  template:
+    src: my.cnf.j2
+    dest: /root/.my.cnf

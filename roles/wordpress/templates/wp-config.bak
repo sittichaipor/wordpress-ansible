@@ -1,0 +1,52 @@
+<?php
+/**
+ * The base configurations of the WordPress.
+ *
+ * This file has the following configurations: MySQL settings, Table Prefix,
+ * Secret Keys, and ABSPATH. You can find more information by visiting
+ * {@link https://codex.wordpress.org/Editing_wp-config.php Editing wp-config.php}
+ * Codex page. You can get the MySQL settings from your web host.
+ *
+ * This file is used by the wp-config.php creation script during the
+ * installation. You don't have to use the web site, you can just copy this file
+ * to "wp-config.php" and fill in the values.
+ *
+ * @package WordPress
+ */
+
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+    define('DB_NAME', '{{ db_name }}');
+
+/** MySQL database username */
+    define('DB_USER', '{{ db_user }}');
+
+/** MySQL database password */
+    define('DB_PASSWORD', '{{ db_password }}');
+
+/** MySQL hostname */
+    define('DB_HOST', 'localhost');
+
+/** Database Charset to use in creating database tables. */
+define('DB_CHARSET', 'utf8');
+
+/** The Database Collate type. Don't change this if in doubt. */
+define('DB_COLLATE', '');
+
+/**#@+
+ * Authentication Unique Keys and Salts.
+ *
+ * Change these to different unique phrases!
+ * You can generate these using the {@link https://api.wordpress.org/secret-key/1.1/salt/ WordPress.org secret-key service}
+ * You can change these at any point in time to invalidate all existing cookies. This will force all users to have to log in again.
+ *
+ * @since 2.6.0
+ */
+define('AUTH_KEY',         'oS||Jy#rHEi21JM)mDQ]zz{ d?[=xt~p-i}rgy{FPM#1iLA1h5Zkf:W_{I5rONN,');
+define('SECURE_AUTH_KEY',  'q`S?LLSw8,;.6;q@pm-DOKUV>Ew>-C7_dwZMlM/<[dejJ[bj=Q|kh]_dF+mnas)I');
+define('LOGGED_IN_KEY',    'Sz4xPN=QcKuYW/G4Xb=dk8g<]P%|{Snh4U_-f?6OOPAo_(dpDhjS.Pi;Kpjz>w?J');
+define('NONCE_KEY',        '>y5E-OXWVF?0e</3!1uT(VC#p3$)dLwu:=1u0{>%]ki;9]G}Bm?{5qCE,$Gp5Oxm');
+define('AUTH_SALT',        'BMV7C9Yf*%E:F]viK]P8yF[]iGX/>Pr9kG} {1]0H]p9X|/:RB4g`CSZDIo35p{h');
+define('SECURE_AUTH_SALT', 'tu/(!eqA+?/f5n`+EfaRV/7w|=zwr+ 1,?+@i~|Lzffq*MzmC@7|, $|RwkzIe}.');
+define('LOGGED_IN_SALT',   'j[A3ro.#-2NEM%n$zO_:<F5??-/!b7@tsaiaW+4OA#&TJipGqr-MqZ$[PbrO0WLF');
+define('NONCE_SALT',       './$f-DvSsBuG6IM8D[&iyVaoXjhH<[>(}OBhD$K+:6J/nBlVeUVRdxd|ca]hf:xi');

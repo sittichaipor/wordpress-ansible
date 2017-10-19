@@ -1,0 +1,19 @@
+---
+
+- hosts: localhost
+
+  sudo: yes
+
+  vars:
+    - db_name: wordpressdb
+    - db_user: root
+    - db_password: P@ssword1
+    - path_mysql_conf: /etc/mysql/my.cnf
+    - wp_db_name: wordpressdb
+    - wp_db_user: userwp
+    - wp_db_password: p@ssW0rd
+  roles:
+    - update
+    - php
+    - mysql
+    - wordpress

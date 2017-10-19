@@ -1,0 +1,6 @@
+---
+
+- name: yum update the server
+  yum:
+    name: '*'
+    state: latest

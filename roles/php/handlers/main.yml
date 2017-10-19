@@ -1,0 +1,7 @@
+---
+
+- name: Start Apache
+  command: systemctl restart httpd
+
+- name: Start Apache
+  command: systemctl start httpd
